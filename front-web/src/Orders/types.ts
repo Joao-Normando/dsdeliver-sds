@@ -6,8 +6,16 @@ export type Product =  {
     imageUri: string;
 }
 
-export type OrderLocationdata = {
+export type OrderLocationData = {
     latitude: number;
-    longitud : number;
+    longitude : number;
     address: string;
 }
+
+type ProductId = {
+    id: number;
+}
+
+export type OrderPayload = {
+    procuts: ProductId [];
+} & OrderLocationData;
